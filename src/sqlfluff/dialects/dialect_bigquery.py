@@ -179,7 +179,7 @@ bigquery_dialect.replace(
         RegexParser(
             r"[A-Z_][A-Z0-9_]*", CodeSegment, name="parameter", type="parameter"
         ),
-        RegexParser(r"`[^`]*`", CodeSegment, name="parameter", type="parameter"),
+        RegexParser(r"`?[^`]*`?", CodeSegment, name="parameter", type="parameter"),
     ),
     DateTimeLiteralGrammar=Nothing(),
     JoinLikeClauseGrammar=Sequence(
